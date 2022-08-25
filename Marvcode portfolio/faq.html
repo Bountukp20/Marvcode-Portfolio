@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Quicksand", sans-serif;
+            background: hsl(27, 94%, 6%);
+            color: #fff;
+        }
+        section{
+            min-height: 100vh;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title{
+            font-size: 3rem;
+            margin: 2rem 0rem;
+        }
+        .faq{
+            max-width: 700px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #fff;
+            cursor: pointer;
+        }
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question h3{
+            font-size: 1.8rem;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.4s ease;
+        }
+        .answer p{
+            padding-top: 1rem;
+            line-height: 1.6;
+            font-size: 1.4rem;
+        }
+
+        .faq.active .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .faq.active svg{
+            transform: rotate(180deg);
+        }
+        svg {
+            transition: transform 0.5s ease-in;
+        }
+
+        @keyframes fade{
+            from{
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    </style>
+    <section>
+        <h2 class="title">FAQs</h2>
+        <div class="faq">
+            <div class="question">
+                <h3>What is the dashboard about?</h3>
+                <div class="answer">
+                    <p>It is simply a platform used for selling codes and templates for fast development.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What are the daily views?</h3>
+                <div class="answer">
+                    <p>The daily views shows the number of times the dashboard page has been visited by all users</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How many accounts can I create?</h3>
+                <div class="answer">
+                    <p>You can only create one account per web browser. For example if you used chrome to register you should still use chrome to login.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How can I delete my account?</h3>
+                <div class="answer">
+                    <p>On the profile page visit the settings page, then tap or click on the button delete account. It will delete every credentials of yours.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What web browser is better to use?</h3>
+                <div class="answer">
+                    <p>Preferably chrome.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Can I change my profile name?</h3>
+                <div class="answer">
+                    <p>No you can't except you re-register. It is the same as deleting your account, only that it is going to update your account if you register again.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Can I change my username?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How can I recover my password?</h3>
+                <div class="answer">
+                    <p>In the Login page you would see a forgot password page, click on it, then it will ask you for your recovery email, which you would have provided on your profile page, then a new password. It will simply update the password.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How can I change the language?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What is the username used for?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What is our clients page used for?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Can I chat with other users logged in?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What is the comments page used for?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What is the chat forum page used for?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>What else must I add at the back of whatever I want to search on?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Those orders that have been delivered, have they really been delivered?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How to buy some of your projects?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How many of your projects can I buy?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Can I buy double or triple or more of one particular project of yours at a particular period of time?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>While purchasing some of your projects, can I go back to the dashboard page?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>If I do go back to the dashboard while purchasing some of your projects, what will happen?</h3>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam neque porro vel vero adipisci,
+                        suscipit, obcaecati ut dolores veritatis officia cum dolorem, consequatur odio voluptatem! Sint,
+                        debitis? Ipsum, ipsam.</p>
+                </div>
+                <svg width="45" height="30" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <a href="profile.html">Go Back</a>
+    </section>
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach(faq =>{
+            faq.addEventListener("click", () => {
+                faq.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

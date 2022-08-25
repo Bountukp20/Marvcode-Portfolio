@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+</head>
+<body>
+    <style>
+        *{
+            background: rgb(177, 170, 170);
+        }
+        h1{
+            font-size: 50px;
+            font-style: oblique;
+            color: coral;
+            text-align: center;
+        }
+        .box{
+            box-sizing: border-box;
+            box-shadow: burlywood;
+            justify-items: center;
+        }
+        *{
+            margin-top: 50px;
+            box-sizing: border-box;
+            box-shadow: burlywood;
+            align-items: center;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        button{
+            border-style: none;
+            border-color: aqua;
+            margin-left: 634px;
+            background: red;
+            padding: 10px;
+            border-radius: 20%;
+        }
+        a{
+            color: aquamarine;
+            text-align: center;
+            text-decoration: none;
+            background: black;
+            margin-left: 660px;
+            padding: 10px;
+        }
+        h3{
+            text-decoration: underline;
+            text-align: center;
+            font-size: 20px;
+        }
+
+    </style>
+    <header>
+        <h1>Settings</h1>
+    </header>
+    <div>
+        <h2>Account</h2>
+        <h3>Change</h3>
+        <form></form>
+        <label>Password</label>
+        <input type="password"/>
+        <button type="button" id="delete" onclick="deleteButton()">Delete account</button>
+        <h2 class="account">Recovery Email</h2>
+        <p id="recover"></p>
+    </div>
+    <a href="profile.html">&LeftArrowBar; back</a>
+    <script>
+        function deleteButton() {
+            localStorage.removeItem('newPassword');
+            localStorage.removeItem('fullname');
+            localStorage.removeItem('newUsername');
+            localStorage.removeItem('recent-image');
+            localStorage.removeItem('recover');
+            localStorage.removeItem('e-mail');
+            localStorage.removeItem('country');
+            alert("Your account has been deleted.");
+            window.location = "login.html"
+        }
+        var getRecoveryEmail = localStorage.getItem('recover');
+            document.getElementById('recover').textContent = getRecoveryEmail
+    </script>
+</body>
+</html>

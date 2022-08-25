@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="/Image/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/Image/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/Image/favicon-16x16.png">
+		<link rel="manifest" href="/Image/site.webmanifest">
+		<title>Login</title>
+	</head>
+	<body>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			body{
+					background-image: url(../Image/Group\ 33579\ \(1\).png);
+					background-size: cover;
+					background-repeat: no-repeat;
+					font-family: "Rubik", sans-serif;
+					box-sizing: border-box;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 100vh;
+					
+				}
+				
+			main{
+				background-color: white;
+				text-align: center;
+				border-radius: 10px;
+				padding: 5% 10%;
+				position: relative;
+			}
+			#firstlink{
+				color: black;
+				background-color: white;
+			}
+			
+			a i{
+				position: absolute;
+				right: 20px;
+				top: 20px;
+			
+			}
+			a i:hover{
+				font-size: x-large;
+			}
+			
+			button{
+				background-color: #3498F4;
+				color: white;
+				padding: 10px 20px;
+				border: 0;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		</style>
+		<main>
+			<a href="{% url 'home' %}" id="firstlink"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+			<img src="https://raw.githubusercontent.com/zuri-training/team-93_anime-lib/a9b66bbb0d767fb404590e88d0e4c08c9a9d321c/Image/mail.svg" alt="Mail">
+			<h1>Verify your Email Address</h1>
+			<p>You've entered <strong>{{ user.username }}</strong> as your Email Address for your account.</p>
+			<p>Please verify this email address by clicking the button below.</p>
+			<a href="#"><button>Verify</button></a>
+		</main>
+	</body>
+</html>
